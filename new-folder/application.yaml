@@ -1,14 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: myapp-argo-application
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/CBI-DevOps-PFE/front.git
+    repoURL: https://github.com/CBI-DevOps-PFE/deployments.git
     targetRevision: HEAD
-    path: guestbook
+    path: deployments
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: myapp
+  synPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+     SelfHeal:true
+     prune:true
+    
