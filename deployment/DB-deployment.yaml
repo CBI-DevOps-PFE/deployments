@@ -20,10 +20,10 @@ spec:
       - name: mysql
         image: mysql:latest
         env:
-          - name: MYSQL_ROOT_PASSWORD
-            value: ""
+          - name: MYSQL_ALLOW_EMPTY_PASSWORD
+            value: "true"
         ports:
-        - containerPort: 3306
+        - containerPort: 4306
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
