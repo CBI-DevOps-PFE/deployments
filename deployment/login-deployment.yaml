@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: login-backend
-        image: your_backend_image:latest
+        image: bounajia/login:tagname
         env:
           - name: SPRING_DATASOURCE_URL
             value: "jdbc:mysql://mysql:4306/login?useSSL=false"
