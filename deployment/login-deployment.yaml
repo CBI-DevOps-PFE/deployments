@@ -26,7 +26,6 @@ spec:
             value: ""
           - name: DB_NAME
             value: login
-            value: "8084"
         ports:
         - containerPort: 8084
 ---
