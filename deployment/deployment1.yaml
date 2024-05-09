@@ -18,18 +18,18 @@ spec:
       - name: front
         image: bounajia/front-app:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8083
             
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: service1
+  name: front-deployment
 spec:
   selector:
     app: front
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 8083
+      targetPort: 8083
      
