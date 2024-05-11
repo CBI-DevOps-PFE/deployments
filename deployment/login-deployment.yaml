@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: login-backend
-        image: bounajia/login:tagname
+        image: bounajia/login:latest
         env:
           - name: DB_HOST
             value: mysql
