@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: search-container
-        image: bounajia/search:tagname
+        image: bounajia/search:latest
         ports:
         - containerPort: 80
 ---
