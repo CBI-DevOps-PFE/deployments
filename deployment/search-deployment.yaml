@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: search-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: search
@@ -16,7 +16,7 @@ spec:
       - name: search-container
         image: bounajia/search:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8066
 ---
 apiVersion: v1
 kind: Service
@@ -27,5 +27,5 @@ spec:
     app: search
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 8066
+    targetPort: 8066
