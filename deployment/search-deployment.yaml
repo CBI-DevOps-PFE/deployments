@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: search
-        image: bounajia/search:latest
+        image: bounajia/search
         ports:
         - containerPort: 8066
 ---
