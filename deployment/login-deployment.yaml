@@ -16,16 +16,14 @@ spec:
       - name: login-backend
         image: bounajia/login:latest
         env:
-          - name: DB_HOST
-            value: mysql
-          - name: DB_PORT
-            value: "4306"
-          - name: DB_USERNAME
-            value: root
-          - name: DB_PASSWORD
-            value: ""
-          - name: DB_NAME
-            value: login
+        - name: DB_HOST
+          value: mysql
+        - name: DB_PORT
+          value: "4306"
+        - name: DB_USERNAME
+          value: root
+        - name: DB_NAME
+          value: login
         ports:
         - containerPort: 8084
 ---
