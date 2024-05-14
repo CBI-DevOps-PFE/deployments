@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: front-deployment
+  name: front-service
 spec:
   selector:
     app: front
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8083
-  type: NodePort   # Change the type to NodePort
+  - protocol: TCP
+    port: 80
+    targetPort: 8083
+  type: LoadBalancer
