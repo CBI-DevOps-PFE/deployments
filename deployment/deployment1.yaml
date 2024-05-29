@@ -30,6 +30,7 @@ spec:
     app: front
   ports:
   - protocol: TCP
-    port: 8083
+    port: 80
     targetPort: 8083
+  type: ClusterIP
   
