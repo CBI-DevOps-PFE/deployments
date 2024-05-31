@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: login-backend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: login-backend
